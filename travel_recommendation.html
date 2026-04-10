@@ -6,7 +6,7 @@
     <title>Travel Recommendation</title>
     <style>
         :root{
-            --primary-bg-color: rgb(10,100,220);
+            --primary-bg-color: rgb(10,180,230);
             --primary-font-color: rgb(10,4,50);
         }
         *{
@@ -19,6 +19,7 @@
         }
 
         #header_nav{
+            height: 40px;
             display: flex;
             flex-direction: row;
             background-color: var(--primary-bg-color)
@@ -53,6 +54,39 @@
             color: var(--primary-font-color);
         }
 
+        #search_navigator{
+            width: 400px;
+            height: 30px;
+            background-color: white;
+            border: none;
+            border-radius: 40px;
+        }
+
+        #search_box{
+            border: none;
+            background-color: transparent;
+            width: 200px;
+            margin-left: 15px;
+            outline: none;
+            color: black;
+            margin-top: 5px;
+        }
+
+        .search_button{
+            border-radius: 20px;
+            background-color: rgb(20,60,20);
+            color: white;
+            padding: 0px 10px;
+            margin-right: 5px;
+            cursor:pointer;
+        }
+
+        .search_button:hover{
+            background-color:rgb(100,200,100);
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -68,8 +102,8 @@
         </div>
         <div id="search_navigator">
             <input id="search_box" placeholder="Enter a destination or keyboard">
-            <button id= "search_button">Search</button>
-            <button id= "clear_button">Clear</button>
+            <button class ="search_button" id= "search_button">Search</button>
+            <button class ="search_button" id= "clear_button">Clear</button>
         </div>
     </nav>
 </body>
