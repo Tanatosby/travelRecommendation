@@ -6,11 +6,12 @@
     <title>Travel Recommendation</title>
     <style>
         :root{
-            --primary-bg-color: rgb(10,180,230);
-            --primary-font-color: rgb(10,4,50);
+            --primary-bg-color: rgb(243, 157, 72);
+            --primary-font-color: rgb(86, 42, 3);
+            --secondary-font-color: rgb(249, 134, 26);
+            --secundary-bg-color: rgb(235, 101, 24);
         }
         *{
-            margin: auto;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
         }
 
@@ -19,29 +20,42 @@
         }
 
         #header_nav{
-            height: 40px;
+            height: 90px;
             display: flex;
             flex-direction: row;
-            background-color: var(--primary-bg-color)
+            background-color: var(--primary-bg-color);
+            justify-content: space-between;
         }
         #title_homepage{
             display: flex;     
-            flex-direction: row; 
+            flex-direction: row;
+            justify-content: center; 
         }
         #logo_homepage{
             font-size: 30px;
+            text-decoration: none;
+            margin: auto;
+            margin-right: 5px;
+        }
+
+        #text_title_a{
+            text-decoration: none;
+            margin: auto;
         }
 
         #textTitle_homepage{
             color: var(--primary-font-color);
+            cursor: pointer;
         }
         
         #links_homepage{
-            padding: 10px 0px; 
+            padding: 10px 0px 0px 30px;
+            margin: 25px 0px 0px 15px; 
         }
 
         .link_homepage{
             text-decoration: none;
+            font-size: 20px;
             margin-left: 5px;
             color: var(--primary-font-color);
         }
@@ -56,10 +70,11 @@
 
         #search_navigator{
             width: 400px;
-            height: 30px;
+            height: 40px;
             background-color: white;
             border: none;
             border-radius: 40px;
+            margin-top: 25px;
         }
 
         #search_box{
@@ -69,21 +84,80 @@
             margin-left: 15px;
             outline: none;
             color: black;
-            margin-top: 5px;
+            margin-top: 10px;
+            font-size: 15px;
         }
 
         .search_button{
             border-radius: 20px;
-            background-color: rgb(20,60,20);
+            background-color: var(--secundary-bg-color);
             color: white;
             padding: 0px 10px;
             margin-right: 5px;
+            font-size: 15px;
             cursor:pointer;
+            border: none;
         }
 
         .search_button:hover{
-            background-color:rgb(100,200,100);
+            background-color:var(--primary-bg-color);
         }
+
+        #home_page{
+            height: 100vh;
+            width: auto;
+            background-image: url('travels.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;        
+        }
+
+        #social_networks{
+            max-width: 100px;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 20px;
+            margin-top: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .social_network{
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            padding: 20px 0px;        
+        }
+
+        #booking{
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            max-width: 80vw;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #text_principal{
+            font-size: 80px;
+            color: var(--secondary-font-color);
+        }
+
+        #text_secondary{
+            font-size: 25px;
+            margin-top: 0px;
+            color: white;
+        }
+
+        #book_now{
+            padding: 8px 12px;
+            background-color: var(--secundary-bg-color);
+            border: none;
+            font-size: 15px;
+        }
+
 
 
 
@@ -92,8 +166,8 @@
 <body>
     <nav id="header_nav">
         <div id="title_homepage">
-            <span id="logo_homepage">✈️</span>
-            <h1 id="textTitle_homepage">TravelFast</h1>
+            <a href="/travel_recommendation.html" id="logo_homepage">✈️</a>
+            <a id="text_title_a" href="/travel_recommendation.html"><h1 id="textTitle_homepage">TravelFast</h1></a>
         </div>
         <div id= "links_homepage">
             <a class="link_homepage" href= "/travel_recommendation.html">Home</a>
@@ -107,5 +181,27 @@
             <button class ="search_button" id= "clear_button">Clear</button>
         </div>
     </nav>
+
+    <div id="home_page">
+        
+        <nav id="social_networks">
+            <a class="social_network" href="https://x.com">𝕏</a>
+            <a class="social_network" href="https://facebook.com">ⓕ</a>
+            <a class="social_network" href="https://instagram.com">🅾</a>
+            <a class="social_network" href="https://youtube.com">▶</a>
+        </nav>
+        <div id ="booking">
+            <h1 id="text_principal">EXPLORE DREAM DESTINATION</h1>
+            <p id="text_secondary">This app allows you to looking for your special trip in Europe, checking hostels, flying and do reservations Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae voluptatibus totam mollitia porro distinctio voluptatem perferendis, iure quas neque laborum. Velit facere quas doloribus reprehenderit laboriosam similique totam quaerat.</p>
+            <button id="book_now">Book Now</button>
+        </div>
+
+
+    </div>
+
+   
+
+
+
 </body>
 </html>
