@@ -81,6 +81,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            height: 80vh;
         }
 
 
@@ -111,6 +112,44 @@
         #contact_us_container h1{
             font-size: 70px;
             margin-top: 130px;
+            color: var(--secondary-font-color);
+         }
+
+        #contact_us_container p{
+            font-size: 18px;
+            color: var(--secondary-font-color);
+            margin-top: -10px;
+        }
+
+        #contact_us_form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin-right: 50px;
+            
+        }
+
+        .input_for_contact{
+            background-color: transparent;
+            border: 1px solid  white;
+            outline: none;
+            margin: 22px 0px 22px 0px;
+            border-radius: 5px;
+            padding: 9px 0px;
+        }
+
+
+
+
+        .label_for_contact{
+            color: var(--secondary-font-color);
+        }
+
+        #submit_button{
+            height: 30px;
+            background-color: var(--secundary-bg-color);
+            color: var(--primary-font-color);
+            cursor: pointer;
         }
 
       
@@ -145,12 +184,13 @@
         </div>
 
         <form id="contact_us_form">
-            <label for="enter_your_name">Name</label>
-            <input id="enter_your_name" type="text" placeholder="Enter your Name">
-            <label for="enter_your_email">Email</label>
-            <input id="enter_your_email" type="email" placeholder="Enter your mail">
-            <label for="enter_your_message">Message</label>
-            <textarea id="enter_your_message" rows=15 placeholder="Enter your message"></textarea>
+            <label class="label_for_contact" for="enter_your_name">Name</label>
+            <input class="input_for_contact" id="enter_your_name" type="text" placeholder="Enter your Name">
+            <label class="label_for_contact" for="enter_your_email">Email</label>
+            <input class="input_for_contact" id="enter_your_email" type="email" placeholder="Enter your mail">
+            <label class="label_for_contact" for="enter_your_message">Message</label>
+            <textarea class="input_for_contact" id="enter_your_message" rows=15 placeholder="Enter your message"></textarea>
+            <button id= "submit_button">Submit</button>
         </form>
        
 
