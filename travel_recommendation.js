@@ -39,8 +39,9 @@ function display(key){
 function showSearching(element,b){
     const divContainerResults = document.getElementById('results_container')
     const divContainerBooking = document.getElementById('booking')
-    divContainerResults.classList.remove('hidden')
     divContainerBooking.style.display = 'none'
+    divContainerResults.classList.remove('hidden')
+    divContainerResults.classList.add('view')
     const divresults = document.getElementById('results')
     const results = document.createElement('div')
     if(!b){

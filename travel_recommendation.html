@@ -168,8 +168,37 @@
         }
 
         .hidden{
-            display: none;
+            display: none !important;
         }
+
+        .view{
+            display: grid;
+            grid-template-rows: 20% 80%;
+        }
+
+        .results_h1{
+            font-size: 40px;
+            color: var(--secondary-font-color);
+        }
+
+        .results_view{
+            display:grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .result{
+            display: grid;
+            grid-template-rows: 60% 20% 20%;
+            max-height: 500px;
+            background-color: white;
+        }
+
+        .image_result{
+            height: auto;
+            max-width: 300px;
+        }
+
+
 
 
 
@@ -209,9 +238,9 @@
             <button id="book_now">Book Now</button>
         </div>
 
-    <div class= "hidden" id= "results_container">
-        <h1>Search Results</h1>
-        <div id='results'></div>
+    <div class= "hidden" class="view" id= "results_container">
+        <h1 class ="results_h1">Search Results</h1>
+        <div class="results_view" id='results'></div>
     </div>
 
 
