@@ -16,14 +16,54 @@ function display(key){
      fetch('travel_recommendation_api.json')
     .then(response=>response.json())
     .then(data=>{
+    const divresults = document.getElementById('results');
+    divresults.innerHTML = "";
     let s = data[key];
-    s.forEach(element => {
-        console.log(element.name);
-    });
+    if(key == 'countries'){
+        s.forEach(element => {
+        showSearching(element,true);
+        });
+    } else{
+        s.forEach(element => {
+        showSearching(element,false);
+        });
+    }
     })
     .catch(error=>{
     console.log('Error:',error);
     });
 }
+
+
+
+function showSearching(element,b){
+    const divContainerResults = document.getElementById('results_container')
+    const divContainerBooking = document.getElementById('booking')
+    divContainerResults.classList.remove('hidden')
+    divContainerBooking.style.display = 'none'
+    const divresults = document.getElementById('results')
+    const results = document.createElement('div')
+    if(!b){
+    results.innerHTML = `
+    <div class= "result">
+        <img class= "image_result" src= ${element.imageUrl} alt = 'img_result'>
+        <h1 class = "name_result">${element.name}</h1>
+        <p class = "description_result">${element.description}</p>
+    </div>
+    `}else {
+        results.innerHTML = `
+        <div class= "result">
+            <img class= 'image_result' src= ${element.cities[0].imageUrl} alt = "img_result">
+            <h1 class = "name_result">${element.name}</h1>
+            <p class = "description_result">${element.cities[0].description}</p>
+        </div>`
+        }
+    
+    divresults.appendChild(results);
+
+}
+
+
+
 
 document.getElementById('search_button').addEventListener('click',Searchfunc)
