@@ -64,7 +64,12 @@ function showSearching(element,b){
 
 }
 
+function clearAll(){
+const divresults = document.getElementById('results')
+divresults.innerHTML = "";
+}
 
 
+document.getElementById('search_button').addEventListener('click',Searchfunc);
 
-document.getElementById('search_button').addEventListener('click',Searchfunc)
+document.getElementById('clear_button').addEventListener('click',clearAll);
